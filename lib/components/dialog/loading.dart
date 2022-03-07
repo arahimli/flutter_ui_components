@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:lifestep/config/main_colors.dart';
-import 'package:lifestep/config/styles.dart';
+import 'package:flutter_ui_components/config/main_colors.dart';
+import 'package:flutter_ui_components/config/styles.dart';
 
 class LoadingDialogWidget extends StatefulWidget {
   final String text;

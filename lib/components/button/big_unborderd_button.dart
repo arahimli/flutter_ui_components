@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_ui_components/config/main_colors.dart';
+import 'package:flutter_ui_components/config/styles.dart';
+
+class BigUnBorderedButton extends StatelessWidget {
+  final Function()? onTap;
+  final String text;
+  final Color? buttonColor;
+  final Color? textColor;
+  final TextStyle? textStyle;
+  final double? horizontal;
+  final double? vertical;
+  final double? borderRadius;
+  const BigUnBorderedButton({Key? key, this.onTap, required this.text, this.buttonColor, this.textColor, this.textStyle, this.horizontal, this.vertical, this.borderRadius}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: horizontal ?? 0, vertical: vertical ?? 0),
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
+          width: double.infinity,
+          height: 64,
+          decoration: BoxDecoration(
+            color: buttonColor ?? MainColors.darkBlue500,
+            borderRadius: borderRadius != null ? BorderRadius.circular(borderRadius!) : BorderRadius.circular(4),
+          ),
+          child: Center(child: Text(text, textAlign: TextAlign.center, style: textStyle ?? MainStyles.boldTextStyle.copyWith(color: textColor ?? MainColors.white),)),
+        ),
+      ),
+    );
+  }
+}

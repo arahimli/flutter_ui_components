@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
-import 'package:lifestep/common/utlis.dart';
-import 'package:lifestep/components/buttons/big_unborderd_button.dart';
-import 'package:lifestep/config/main_colors.dart';
-import 'package:lifestep/config/styles.dart';
+import 'package:flutter_ui_components/common/utlis.dart';
+import 'package:flutter_ui_components/components/button/big_unborderd_button.dart';
+import 'package:flutter_ui_components/config/main_colors.dart';
+import 'package:flutter_ui_components/config/styles.dart';
 
 class LocationErrorView extends StatefulWidget {
   final String? errorText;
